@@ -1,8 +1,12 @@
+import TopBar from "../../Components/Shared/Topbar/TopBar";
 
 const Dashboard = () => {
     return (
         <div>
-            <h1>DashBoard</h1>
+            <div className="container mx-auto">
+            <TopBar></TopBar>
+            </div>
+            <h1>Side Bar</h1>
         </div>
     );
 };
