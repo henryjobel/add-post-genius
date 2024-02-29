@@ -7,11 +7,12 @@ import logo from "../../assets/logo/apg-logo 2.png"
 
 
 const Login = () => {
-    const {singIn} = useContext(AuthContext)
+    const {singIn} = useContext(AuthContext);
     const location = useLocation();
     const naviGates = useNavigate();
     const handlelogin = e =>{
         e.preventDefault();
+        // form input datas
         const form = new FormData(e.currentTarget)
         const email = form.get('email')
         const password = form.get('password')
@@ -39,6 +40,7 @@ const Login = () => {
 
     return (
         <div>
+             {/* form sections */}
             <div className="hero min-h-screen">
                 <div>
                     <div className='ml-20'>

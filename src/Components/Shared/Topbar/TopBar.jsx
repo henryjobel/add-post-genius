@@ -2,7 +2,7 @@ import React from 'react';
 
 const TopBar = () => {
     return (
-        <div>
+        <div className='container mx-[250px]'>
             <div className="navbar bg-base-100">
                 <div className="flex-1">
                     <a className="btn btn-ghost text-xl">Dashboard</a>
