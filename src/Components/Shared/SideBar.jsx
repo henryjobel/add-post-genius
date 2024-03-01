@@ -18,7 +18,7 @@ const SideBar = () => {
       <div className="z-10 md:fixed flex flex-col justify-between overflow-x-hidden bg-white w-64 space-y-6 px-2 py-4 absolute inset-y-0 left-0 transform">
         <div>
           <div className="pb-10">
-            <img src={logo} alt="" />
+            <a href="https://add-post-genius-203b0.web.app/"><img src={logo} alt="" /></a>
           </div>
           <ul>
             {navLinks.map((link) => (

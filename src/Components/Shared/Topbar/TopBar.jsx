@@ -13,20 +13,44 @@ const TopBar = () => {
                     </div>
                     <div className="dropdown dropdown-end">
                         <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-                            <div className="w-10 rounded-full">
-                                <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-                            </div>
+                            {/* You can open the modal using document.getElementById('ID').showModal() method */}
+                            <button className="btn btn-success text-white" onClick={() => document.getElementById('my_modal_3').showModal()}>Add Account</button>
+                            <dialog id="my_modal_3" className="modal">
+                                <div className="modal-box">
+                                    <form method="dialog">
+                                        {/* if there is a button in form, it will close the modal */}
+                                        <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                                    </form>
+                                    <h1 className='text-4xl font-extrabold my-10'>Add New Client</h1>
+                                    <form  >
+                                        <div className="form-control ">
+                                            
+                                            <input type="text" name='frist-name' required placeholder="Frist Name" className="input input-bordered bg-[#F4F7FE]" />
+                                        </div>
+                                        <div className="form-control">
+                                            <input type="Text" placeholder="Last Name" name='last-name' required className="input input-bordered mt-3 bg-[#F4F7FE]" />
+                                        </div>
+                                        <div className="form-control">
+                                            
+                                            <input type="text" placeholder="Company Name" name='company-name' required className="input input-bordered mt-3 bg-[#F4F7FE]" />
+                                        </div>
+                                        <div className="form-control">
+                                            
+                                            <input type="text" placeholder="Phone Number" name='phone-number' required className="input input-bordered mt-3 bg-[#F4F7FE]" />
+                                        </div>
+                                        <div className="form-control">
+                                            <input type="text" placeholder="Email Address" name='email' required className="input input-bordered mt-3 bg-[#F4F7FE]" />
+                                        </div>
+                                        <div className="form-control mt-6">
+                                            <button className="btn btn-outline btn-success">Create Account</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </dialog>
                         </div>
-                        <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
-                            <li>
-                                <a className="justify-between">
-                                    Profile
-                                    <span className="badge">New</span>
-                                </a>
-                            </li>
-                            <li><a>Settings</a></li>
-                            <li><a>Logout</a></li>
-                        </ul>
+                        <div>
+
+                        </div>
                     </div>
                 </div>
             </div>

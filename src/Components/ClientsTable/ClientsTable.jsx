@@ -1,4 +1,5 @@
 
+import { Link } from "react-router-dom";
 import userImage from "../../assets/logo/Ellipse 7.png"
 
 const ClientsTable = () => {
@@ -61,7 +62,7 @@ const ClientsTable = () => {
 
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap  text-sm font-medium">
-                            <button className="btn btn-outline btn-success">View Profile</button>
+                        <Link to="/client-profile" className="btn btn-outline btn-success">View Profile</Link>
                         </td>
                     </tr>
                     {/* Add more rows as needed */}
@@ -97,7 +98,7 @@ const ClientsTable = () => {
 
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap  text-sm font-medium">
-                            <button className="btn btn-outline btn-success">View Profile</button>
+                        <Link to="/client-profile" className="btn btn-outline btn-success">View Profile</Link>
                         </td>
                     </tr>
                     {/* Add more rows as needed */}
@@ -133,7 +134,7 @@ const ClientsTable = () => {
 
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap  text-sm font-medium">
-                            <button className="btn btn-outline btn-success">View Profile</button>
+                            <Link to="/client-profile" className="btn btn-outline btn-success">View Profile</Link>
                         </td>
                     </tr>
                     {/* Add more rows as needed */}

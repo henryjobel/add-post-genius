@@ -5,6 +5,7 @@ import Dashboard from "../Pages/Dashboard/Dashboard";
 import Register from "../Pages/Register/Register";
 import Client from "../Pages/Clients/Client";
 import Tables from "../Pages/Tables/Tables";
+import ClientProfile from "../Components/ClientProfile/ClientProfile";
 
 const router = createBrowserRouter([
     {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
         {
           path: "/tables",
           element: <Tables></Tables>
+        },
+        {
+          path: "/client-profile",
+          element: <ClientProfile></ClientProfile>
         }
       ]
     },
