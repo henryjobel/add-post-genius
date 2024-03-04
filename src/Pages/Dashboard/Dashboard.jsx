@@ -1,3 +1,4 @@
+import MyChart from "../../Components/MyCrat/MyCart";
 
 
 const Dashboard = () => {
@@ -54,6 +55,7 @@ const Dashboard = () => {
         </div>
       </div>
     </div>
+    <MyChart></MyChart>
  
     </div>
   );
