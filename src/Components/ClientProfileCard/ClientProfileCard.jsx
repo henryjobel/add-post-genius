@@ -3,6 +3,8 @@ import profileBg from "../../assets/logo/Gradient.png"
 import profilepic from "../../assets/logo/Ellipse 8.png"
 
 
+
+
 const ClientProfileCard = () => {
   return (
     <div className="bg-white w-[256px] pb-48 ">

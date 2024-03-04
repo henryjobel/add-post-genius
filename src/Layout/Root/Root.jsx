@@ -10,15 +10,24 @@ const Root = () => {
 
     return (
         <div className='bg-[#F4F7FE]'>
-            {/* Top Bar */}
-            {showSideBar && <TopBar></TopBar>}
-        {/* side bar */}
-            {showSideBar && <SideBar />}
-            <div className="container mx-[290px] ">
-                {/* outlet means All the contens */}
-                <Outlet></Outlet>
+
+            {/* side bar */}
+            <div className='flex'>
+                <div>
+                    {showSideBar && <SideBar />}
+                </div>
+
+                <div className="flex-1">
+                    {/* outlet means All the contens */}
+                    <div className='container w-[1629px]'>
+                        {showSideBar && <TopBar></TopBar>}
+                    </div>
+                    <div className='p-4'>
+                    <Outlet></Outlet>
+                    </div>
+                </div>
             </div>
-            
+
         </div>
     );
 };

@@ -1,47 +1,79 @@
 import React from 'react';
-import { FaHome, FaSignOutAlt, FaUsers } from 'react-icons/fa';
-import { Link, useLocation } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import logo from "../../assets/logo/apg-logo 2.png";
+import { RxDashboard } from "react-icons/rx";
+import { FaUserFriends } from "react-icons/fa";
+import { CiViewTable } from "react-icons/ci";
+import { HiOutlineLogout } from "react-icons/hi";
+
+
+
 
 const SideBar = () => {
-    const location = useLocation();
 
-  const navLinks = [
-    // navigation link for the dashboard menu
-    { to: "/dashboard", icon: <FaHome />, text: "Dashboard" },
-    { to: "/clients", icon: <FaUsers />, text: "Clients" },
-    { to: "/signout", icon: <FaSignOutAlt />, text: "Sign Out" },
-  ];
-    return (
-        <div>
-            <div>
-      <div className="z-10 md:fixed flex flex-col justify-between overflow-x-hidden bg-white w-64 space-y-6 px-2 py-4 absolute inset-y-0 left-0 transform">
-        <div>
-          <div className="pb-10">
-            <a href="https://add-post-genius-203b0.web.app/"><img src={logo} alt="" /></a>
+
+  return (
+    <div>
+      <div>
+        <div className='min-h-screen bg-white w-[250px]'>
+          <div>
+            <div className='px-6 py-3'>
+              <a href="https://add-post-genius-203b0.web.app/"><img src={logo} alt="" /></a>
+            </div>
+            <div className="divider"></div>
           </div>
-          <ul>
-            {navLinks.map((link) => (
-              <li key={link.to} className="mb-2 ">
-                <Link
-                  to={link.to}
-                  className={`${
-                    location.pathname === link.to
-                      ? "text-white bg-[#0CAE93] hover:bg-[#0CAE93] active:bg-[#0CAE93]"
-                      : "text-blue-500 hover:text-blue-700 hover:bg-gray-200"
-                  } flex items-center justify-center w-full p-2 rounded-md`}
+          <div>
+            <ul className='menu'>
+              <li>
+
+                <NavLink
+                  style={({ isActive, isPending, isTransitioning }) => ({
+                    fontWeight: isActive ? "bold" : "normal",
+                    color: isPending ? "green" : (isActive ? "white" : "#003956"),
+                    viewTransitionName: isTransitioning ? "slide" : "auto",
+                    backgroundColor: isActive ? "#0CAE93" : "transparent",
+                    padding: "16px 24px",
+                    width: "226px",
+                    borderRadius: "12px"
+                  })}
+                  to="/dashboard"
                 >
-                  {link.icon}
-                  <span className="ml-2">{link.text}</span>
-                </Link>
+                  <RxDashboard className='text-2xl'></RxDashboard> Dashboard
+                </NavLink>
               </li>
-            ))}
-          </ul>
+              <li><NavLink style={({ isActive, isPending, isTransitioning }) => ({
+                fontWeight: isActive ? "bold" : "normal",
+                color: isPending ? "green" : (isActive ? "white" : "#003956"),
+                viewTransitionName: isTransitioning ? "slide" : "auto",
+                backgroundColor: isActive ? "#0CAE93" : "transparent",
+                padding: "16px 24px",
+                width: "226px",
+                borderRadius: "12px"
+              })} to="/clients"> <FaUserFriends className='text-2xl'></FaUserFriends> Clinet</NavLink></li>
+              <li><NavLink style={({ isActive, isPending, isTransitioning }) => ({
+                fontWeight: isActive ? "bold" : "normal",
+                color: isPending ? "green" : (isActive ? "white" : "#003956"),
+                viewTransitionName: isTransitioning ? "slide" : "auto",
+                backgroundColor: isActive ? "#0CAE93" : "transparent",
+                padding: "16px 24px",
+                width: "226px",
+                borderRadius: "12px"
+              })} to="/"> <CiViewTable className='text-2xl'></CiViewTable> Tables</NavLink></li>
+              <li><NavLink style={({ isActive, isPending, isTransitioning }) => ({
+                fontWeight: isActive ? "bold" : "normal",
+                color: isPending ? "green" : (isActive ? "white" : "#003956"),
+                viewTransitionName: isTransitioning ? "slide" : "auto",
+                backgroundColor: isActive ? "#0CAE93" : "transparent",
+                padding: "16px 24px",
+                width: "226px",
+                borderRadius: "12px"
+              })} to="/"> <HiOutlineLogout className='text-2xl'></HiOutlineLogout> Sing Out</NavLink></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-        </div>
-    );
+  );
 };
 
 export default SideBar;
