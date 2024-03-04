@@ -19,7 +19,7 @@ const ClientProfileCard = () => {
         <p className="text-gray-500">Gus Bakos</p>
       </div>
       <div className=" text-center pt-2">
-        <Link className="btn bg-[#0CAE93] text-white">Update Profile</Link>
+        <Link to="/update-client" className="btn bg-[#0CAE93] text-white">Update Profile</Link>
       </div>
       <div
         className="flex flex-col justify-center items-center bg-[#F4F7FE] mx-5 mt-5  h-32 border-white  rounded-3xl ">

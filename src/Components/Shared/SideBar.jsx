@@ -24,7 +24,7 @@ const SideBar = () => {
           </div>
           <div>
             <ul className='menu'>
-              <li>
+              <li className='text-lg'>
 
                 <NavLink
                   style={({ isActive, isPending, isTransitioning }) => ({
@@ -38,10 +38,10 @@ const SideBar = () => {
                   })}
                   to="/dashboard"
                 >
-                  <RxDashboard className='text-2xl'></RxDashboard> Dashboard
+                  <RxDashboard className='text-xl'></RxDashboard> Dashboard
                 </NavLink>
               </li>
-              <li><NavLink style={({ isActive, isPending, isTransitioning }) => ({
+              <li className='text-lg'><NavLink style={({ isActive, isPending, isTransitioning }) => ({
                 fontWeight: isActive ? "bold" : "normal",
                 color: isPending ? "green" : (isActive ? "white" : "#003956"),
                 viewTransitionName: isTransitioning ? "slide" : "auto",
@@ -49,8 +49,8 @@ const SideBar = () => {
                 padding: "16px 24px",
                 width: "226px",
                 borderRadius: "12px"
-              })} to="/clients"> <FaUserFriends className='text-2xl'></FaUserFriends> Clinet</NavLink></li>
-              <li><NavLink style={({ isActive, isPending, isTransitioning }) => ({
+              })} to="/clients"> <FaUserFriends className='text-2xl'></FaUserFriends> Clinets</NavLink></li>
+              <li className='text-lg'><NavLink style={({ isActive, isPending, isTransitioning }) => ({
                 fontWeight: isActive ? "bold" : "normal",
                 color: isPending ? "green" : (isActive ? "white" : "#003956"),
                 viewTransitionName: isTransitioning ? "slide" : "auto",
